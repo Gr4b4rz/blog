@@ -1,0 +1,15 @@
+{{define "repos"}}
+<div class="mx-auto max-w-3xl">
+  <dl
+    class="mt-8 grid grid-cols-2 gap-0.5 overflow-hidden rounded-3xl text-center sm:grid-cols-1 lg:grid-cols-2"
+  >
+    {{range $repo := . }}
+    <div class="flex flex-col bg-gray-200/50 p-8">
+      <span class="font-semibold text-lg">{{ $repo.Name }}</span>
+      <p class="text-gray-700">{{ $repo.Description }}</p>
+      <span class="text-gray-500 text-xs">{{ $repo.UpdateDate }}</span>
+    </div>
+    {{end}}
+  </dl>
+</div>
+{{end}}
